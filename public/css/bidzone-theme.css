@@ -1,0 +1,418 @@
+/* =========================================================
+   BIDZONE GLOBAL THEME
+   Default = Dark Cinematic
+========================================================= */
+
+
+/* =========================================================
+   DARK MODE - DEFAULT
+========================================================= */
+
+:root {
+
+    /* Main Backgrounds */
+    --bg-primary: #0d1018;
+    --bg-secondary: #111522;
+
+    /* Cards */
+    --surface: #151a28;
+    --surface-light: #1a2030;
+
+    /* Text */
+    --text-primary: #eef2f8;
+    --text-muted: #8f9bb3;
+
+    /* Borders */
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    /* Accent */
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+
+    /* Secondary futuristic accent */
+    --cyan: #67e8f9;
+
+    /* Status */
+    --success: #22c55e;
+    --danger: #ef4444;
+    --info: #38bdf8;
+
+    /* Shadows */
+    --card-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+html[data-theme="light"] {
+
+    --bg-primary: #f4f7fb;
+    --bg-secondary: #eef2f7;
+
+    --surface: #ffffff;
+    --surface-light: #f8fafc;
+
+    --text-primary: #111827;
+    --text-muted: #64748b;
+
+    --border-color: #e2e8f0;
+
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+
+    --cyan: #0891b2;
+
+    --card-shadow:
+        0 14px 40px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   GLOBAL BODY
+========================================================= */
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(103, 232, 249, 0.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(245, 158, 11, 0.07),
+            transparent 28%
+        ),
+
+        var(--bg-primary);
+
+    color: var(--text-primary);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.theme-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        ),
+        var(--surface);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--card-shadow);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.theme-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(245, 158, 11, 0.35);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.text-theme {
+    color: var(--text-primary) !important;
+}
+
+.text-theme-muted {
+    color: var(--text-muted) !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.btn-bidzone {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f59e0b,
+            #fbbf24
+        );
+
+    color: #111827;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.btn-bidzone:hover {
+
+    color: #111827;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(245, 158, 11, 0.25);
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.theme-input {
+
+    background:
+        var(--surface-light);
+
+    color:
+        var(--text-primary);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 10px;
+}
+
+
+.theme-input:focus {
+
+    background:
+        var(--surface-light);
+
+    color:
+        var(--text-primary);
+
+    border-color:
+        var(--accent);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(245, 158, 11, 0.12);
+
+    outline: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.bidzone-navbar {
+
+    background:
+        rgba(13, 16, 24, 0.86);
+
+    border-bottom:
+        1px solid
+        var(--border-color);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+}
+
+
+html[data-theme="light"]
+.bidzone-navbar {
+
+    background:
+        rgba(255, 255, 255, 0.86);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.bidzone-brand {
+
+    color:
+        var(--text-primary);
+
+    text-decoration:
+        none;
+
+    font-size:
+        27px;
+
+    font-weight:
+        900;
+}
+
+
+.bidzone-brand span {
+
+    color:
+        var(--accent);
+}
+
+
+/* =========================================================
+   THEME TOGGLE BUTTON
+========================================================= */
+
+.theme-toggle {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--surface-light);
+
+    color:
+        var(--text-primary);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.theme-toggle:hover {
+
+    border-color:
+        var(--accent);
+
+    color:
+        var(--accent);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.theme-table {
+
+    color:
+        var(--text-primary);
+}
+
+
+.theme-table th {
+
+    background:
+        var(--surface-light);
+
+    color:
+        var(--text-muted);
+
+    border-color:
+        var(--border-color);
+}
+
+
+.theme-table td {
+
+    background:
+        var(--surface);
+
+    color:
+        var(--text-primary);
+
+    border-color:
+        var(--border-color);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        #31394a;
+
+    border-radius:
+        20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--accent);
+}
